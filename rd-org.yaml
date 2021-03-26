@@ -14,7 +14,7 @@ spec:
     displayName: RD - RaiaDrogasil
     email: info@rd.com.br
     picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
-  children: [microservices]
+  children: [tribe-microservices]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
