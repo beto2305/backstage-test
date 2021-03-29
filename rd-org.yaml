@@ -25,7 +25,7 @@ spec:
   type: tribe
   # Intentional no profile for testing
   parent: rd-tech
-  children: [ms-order, ms-customer]
+  children: [ms-order, ms-delivery]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
