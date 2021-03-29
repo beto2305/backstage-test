@@ -53,7 +53,7 @@ spec:
     email: squadmsorder@rd.com.br
     picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
   parent: tribe-microservices
-  children: []
+  hasMember: []
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -65,3 +65,21 @@ spec:
     email: halyson@rd.com.br
     picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
   memberOf: [ms-order]
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: order-api
+  description: The Order API
+  tags:
+    - microservices
+    - rest
+  annotations:
+    # The annotation is deprecated, we use placeholders (see below) instead, remove it later.
+    backstage.io/definition-at-location: 'url:https://raw.githubusercontent.com/APIs-guru/openapi-directory/master/APIs/spotify.com/v1/swagger.yaml'
+spec:
+  type: openapi
+  lifecycle: production
+  owner: ms-order
+  definition:
+    $text: https://github.com/APIs-guru/openapi-directory/blob/master/APIs/spotify.com/v1/swagger.yaml
