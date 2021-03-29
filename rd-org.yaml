@@ -69,6 +69,25 @@ spec:
   memberOf: [ms-order]
 ---
 apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: order-domain
+  description: Everything related to orders
+spec:
+  owner: ms-order
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: ms-order-portal
+  description: Everything related to order
+  tags:
+    - portal
+spec:
+  owner: ms-order
+  domain: order-domain
+---
+apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: order-api
@@ -82,3 +101,13 @@ spec:
   owner: ms-order
   definition:
     $text: https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/petstore.yaml
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: order-db
+  description: Stores order information
+spec:
+  type: database
+  owner: ms-order
+  system: order-system
