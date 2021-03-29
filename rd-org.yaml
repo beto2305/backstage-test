@@ -64,4 +64,4 @@ spec:
     # Intentional no displayName for testing
     email: halyson@rd.com.br
     picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
-  memberOf: [ms-order]
+  memberOf: ms-order
