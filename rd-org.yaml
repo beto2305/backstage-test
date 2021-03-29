@@ -39,7 +39,7 @@ spec:
     email: squadmsorder@rd.com.br
     picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
   parent: tribe-microservices
-  children: []
+  hasMember: [halyson]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
